@@ -26,15 +26,39 @@
 }
 
 img {
-  width: 12em;
-  border-radius: 50% 50% 50% 0%;
+  width: 10em;
+  border-radius: 50% 50% 50% 25%;
   box-shadow: 0 0 20px 0 #2f2f2f;
   z-index: 1;
+  animation: borderTurn 2s infinite;
+}
+
+@keyframes borderTurn {
+  25% {
+    border-radius: 50% 50% 25% 50%;
+    transform: rotate(-5deg);
+  }
+  50% {
+    border-radius: 50% 50% 50% 25%;
+  }
+  75% {
+    border-radius: 50% 50% 25% 50%;
+    transform: rotate(5deg);
+  }
 }
 
 .link-wrap {
   display: flex;
   gap: 2em;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1em;
 }
 
 .fab {
