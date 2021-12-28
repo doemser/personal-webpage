@@ -1,2 +1,3 @@
-# personal-webpage
-my personal homepage
+# html-css-js-template
+
+Template for html, css, js exercises

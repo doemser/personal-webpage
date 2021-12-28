@@ -1,0 +1,26 @@
+@import "base.css";
+
+.Header {
+  max-width: 80rem;
+  margin: 1rem 3rem;
+}
+.Main {
+  max-width: 80rem;
+  margin: 1rem 3rem;
+}
+
+.MainNav > div {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 48px;
+}
+.MainNav a {
+  display: inline-block;
+  max-width: max-content;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.MainNav a:hover {
+  text-decoration: underline;
+}
