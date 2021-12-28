@@ -1,26 +1,52 @@
 @import "base.css";
 
-.Header {
-  max-width: 80rem;
-  margin: 1rem 3rem;
-}
-.Main {
-  max-width: 80rem;
-  margin: 1rem 3rem;
-}
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
 
-.MainNav > div {
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(48, 5, 107);
+  background: radial-gradient(
+    circle,
+    rgba(48, 5, 107, 1) 0%,
+    rgba(2, 18, 34, 1) 100%
+  );
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  line-height: 48px;
-}
-.MainNav a {
-  display: inline-block;
-  max-width: max-content;
-  color: currentColor;
-  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Work Sans", sans-serif;
 }
 
-.MainNav a:hover {
-  text-decoration: underline;
+.snowflake {
+  width: var(--width);
+  height: var(--width);
+  position: absolute;
+  border-radius: 50%;
+  transition: top 1s, left 1s, width 1s, height 1s, background 1s;
+}
+
+img {
+  width: 15em;
+  border-radius: 50% 50% 50% 0%;
+  box-shadow: 0 0 20px 0 white;
+}
+
+.link-wrap {
+  display: flex;
+  gap: 2em;
+}
+
+.fab {
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.5s;
+}
+
+.fab:hover {
+  opacity: 0.5;
 }
