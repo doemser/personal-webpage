@@ -2,10 +2,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
 
-.wrapper {
+body {
+  background: black;
+}
+
+.wrapper,
+.tech-stack,
+.divider,
+.divider-2 {
   width: 100vw;
   height: 75vh;
-  background: lightpink;
+  background: rgb(255, 182, 193);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 182, 193, 1) 25%,
+    rgba(238, 148, 162, 1) 75%
+  );
   position: relative;
   overflow: hidden;
   display: flex;
@@ -15,37 +27,21 @@
   overflow: hidden;
   font-family: "Work Sans", sans-serif;
   color: #2f2f2f;
-  z-index: -1;
 }
 
 .snowflake {
   width: var(--width);
-  height: var(--width);
+  height: var(--height);
   position: absolute;
-  border-radius: 50%;
-  transition: top 1s, left 1s, width 1s, height 1s, background 1s;
+  border-radius: 0%;
+  transform: var(--degree);
+  transition: top 2s, left 2s, width 2s, height 2s, background 2s, transform 2s;
 }
 
 img {
   width: 10em;
   border-radius: 50% 50% 50% 25%;
   box-shadow: 0 0 20px 0 #2f2f2f;
-  z-index: 1;
-  animation: borderTurn 2s infinite;
-}
-
-@keyframes borderTurn {
-  25% {
-    border-radius: 50% 50% 25% 50%;
-    transform: rotate(-5deg);
-  }
-  50% {
-    border-radius: 50% 50% 50% 25%;
-  }
-  75% {
-    border-radius: 50% 50% 25% 50%;
-    transform: rotate(5deg);
-  }
 }
 
 .link-wrap {
@@ -62,6 +58,15 @@ h2 {
   font-size: 1.1em;
 }
 
+h3 {
+  text-align: center;
+  font-size: 0.9em;
+}
+h4 {
+  font-size: 0.8em;
+  color: silver;
+}
+
 .fab {
   font-size: 2em;
   cursor: pointer;
@@ -73,10 +78,33 @@ h2 {
   opacity: 0.5;
 }
 
-.divider {
-  margin-top: -20px;
+.divider,
+.divider-2 {
+  margin-top: -40px;
   height: 40px;
   color: black;
+  background: transparent;
   background-image: url("/static/images/divider.svg");
   background-position: center;
+}
+
+.divider-2 {
+  margin-top: 0;
+  background-image: url("/static/images/divider.svg");
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.tech-stack {
+  background: black;
+  height: 150px;
+}
+
+.tech-stack .fab {
+  color: white;
+}
+
+.tech-stack .fab:hover {
+  opacity: 1;
+  cursor: unset;
 }
